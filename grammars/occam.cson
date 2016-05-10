@@ -1,0 +1,9 @@
+'scopeName': 'source.occam'
+'name': 'occam'
+'fileTypes': ['occ']
+'patterns' : [
+  {
+    'match': '\\b(?i:(0x\\h*))'
+    'name': 'constant.numeric.integer.hexadecimal.python'
+  }
+]
