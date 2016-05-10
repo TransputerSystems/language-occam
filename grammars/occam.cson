@@ -4,6 +4,40 @@
 'patterns' : [
   {
     'match': '\\b(?i:(0x\\h*))'
-    'name': 'constant.numeric.integer.hexadecimal.python'
+    'name': 'constant.numeric.integer.hexadecimal.occam'
+  },
+  {
+    'name': 'string.quoted.double.untitled'
+    'begin': '"'
+    'end': '"'
+    'patterns': (
+      {
+        'name': 'constant.character.escape.untitled'
+        'match': '\\.'
+      }
+    )
+  },
+  {
+    'name': 'comment.line.double-dash'
+    'match': '^--.*((\\r)?[\\n]|$)'
+  },
+  {
+    'match': '\\b(?:BOOL|BYTE|INT|INT16|INT32|INT64|REAL32|REAL64)\\b'
+    'name': 'storage.type.primitive.java'
+  },
+  {
+    'match': '\\b(PROC)\\s+([a-zA-Z][a-zA-Z0-9\\.]*)\(\)'
+    'captures': {
+      '1': { 'name': 'keyword.control.def.occam' }
+      '2': { 'name': 'entity.name.function.occam' }
+    }
+  },
+  {
+    'match': '\\b(?:SEQ|PAR)\\b'
+    'name': 'keyword.control.occam'
+  },
+  {
+    'match': '\\b(?i:([0-9]+))(\\b|$)'
+    'name': 'constant.numeric.integer.decimal.occam'
   }
 ]
