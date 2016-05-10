@@ -1,7 +1,7 @@
 {
   "name": "language-occam",
   "author": "Ross Gardiner <ross-public@gmx.com>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Provides basic syntax highlighting for the Occam language",
   "keywords": [
     "occam",
